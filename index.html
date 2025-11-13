@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juan José Rojas | Híbrido Técnico-Comercial</title>
+  <style>
+    :root {
+      --primary: #003049;
+      --accent: #00b4d8;
+      --light: #f1faee;
+      --card: #ffffff;
+      --text: #222;
+      --shadow: 0 4px 12px rgba(0,0,0,.08);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease;
+    }
+    header p {
+      font-size: 1.3rem;
+      opacity: .9;
+      animation: fadeInUp 1s ease .3s both;
+    }
+    .btn-scroll {
+      margin-top: 2rem;
+      background: #fff;
+      color: var(--primary);
+      padding: .7rem 1.4rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .3s;
+    }
+    .btn-scroll:hover {
+      transform: scale(1.05);
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      z-index: 1000;
+    }
+    nav a {
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      transition: background .3s;
+    }
+    nav a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 1rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      flex: 1 1 280px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card .icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      width: 50%;
+      padding: 1rem 3rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 1.4rem;
+    }
+    .timeline-item:nth-child(odd)::after {
+      right: -8px;
+    }
+    .timeline-item:nth-child(even)::after {
+      left: -8px;
+    }
+    .timeline-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: .3rem;
+    }
+    .date {
+      font-size: .9rem;
+      color: #555;
+      margin-bottom: .5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: .9rem;
+      color: #666;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 700px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 1rem;
+        text-align: left !important;
+        left: 0 !important;
+      }
+      .timeline-item::after {
+        left: 12px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Juan José Rojas Barreto</h1>
+    <p>14+ años como profesional híbrido: Tecnología, Ventas y Atención al Cliente</p>
+    <a href="#sobremi" class="btn-scroll">Conoce mi perfil</a>
+  </header>
+
+  <nav>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#comercial">Perfil Comercial-Técnico</a>
+    <a href="#logistica">Perfil Logístico</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobremi">
+    <h2>Sobre mí</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3>Experiencia Comercial</h3>
+        <p>Ventas, atención al cliente, community manager y coordinación de equipos en Venezuela y España.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔧</div>
+        <h3>Conocimientos Técnicos</h3>
+        <p>Soporte técnico, redes sociales, herramientas ofimáticas, diseño básico y montaje de PC.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>Apoyo Logístico</h3>
+        <p>Gestión de almacén, carretilla elevadora, preparación de pedidos y producción.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="comercial">
+    <h2>Perfil Comercial y Técnico</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Papeleras Ramírez S.A.</h3>
+        <div class="date">Dic 2009 – Jul 2016 | Venezuela</div>
+        <p>Gerente de compras, community manager, ventas, capacitación de personal.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>SMARMATIC</h3>
+        <div class="date">Nov 2008 – Nov 2009 | Venezuela</div>
+        <p>Coordinación de técnicos para máquinas de votación.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>VJ Marketing</h3>
+        <div class="date">Mar 2005 – Sep 2007 | Venezuela</div>
+        <p>Ejecutivo de ventas por telemarketing.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Merca Hongwei S.L.</h3>
+        <div class="date">Abr 2023 – Oct 2025 | España</div>
+        <p>Atención al cliente, venta en tienda, manejo de caja y resolución de incidencias.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Market Penxu S.L.</h3>
+        <div class="date">Oct 2018 – Nov 2020 | España</div>
+        <p>Asesoramiento al cliente, control de stock y reposición.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="logistica">
+    <h2>Perfil Logístico y Operativo</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Merca Hongwei S.L.</h3>
+        <div class="date">Abr 2023 – Oct 2025 | España</div>
+        <p>Reposición, almacén, limpieza y organización.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Kayaba (Temporing)</h3>
+        <div class="date">Feb 2021 – Nov 2022 | España</div>
+        <p>Operario de producción, picking, carretilla elevadora.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Market Penxu S.L.</h3>
+        <div class="date">Oct 2018 – Nov 2020 | España</div>
+        <p>Mozo de almacén, reposición, control de inventario.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Lácteos Mendi S.L.</h3>
+        <div class="date">Ago 2017 – Mar 2018 | España</div>
+        <p>Preparación de pedidos, inventario, carretilla.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📞</div>
+        <h3>Teléfono</h3>
+        <p><a href="tel:+34664817857">664 817 857</a></p>
+      </div>
+      <div class="card">
+        <div class="icon">✉️</div>
+        <h3>Correo</h3>
+        <p><a href="mailto:juanjoserb1978@gmail.com">juanjoserb1978@gmail.com</a></p>
+      </div>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>Ubicación</h3>
+        <p>Barañain, Navarra</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Juan José Rojas - Portafolio web
+  </footer>
+
+</body>
+</html>
