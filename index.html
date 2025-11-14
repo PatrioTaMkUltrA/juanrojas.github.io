@@ -37,6 +37,7 @@
       color: #fff;
       text-align: center;
       padding: 2rem;
+      position: relative;
     }
     header h1 {
       font-size: 3rem;
@@ -200,14 +201,35 @@
         left: 12px !important;
       }
     }
+    .profile-pic {
+      position: relative;
+      margin-top: 2rem;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Juan José Rojas Barreto</h1>
-    <p>14+ años como profesional híbrido: Tecnología, Ventas y Atención al Cliente</p>
+    <p>Especialista en Tecnología, Ventas y Atención al Cliente</p>
     <a href="#sobremi" class="btn-scroll">Conoce mi perfil</a>
+    <div class="profile-pic">
+      <img src="path_to_your_image.jpg" alt="Juan José Rojas">
+    </div>
   </header>
 
   <nav>
@@ -247,10 +269,9 @@
         <div class="icon">💻</div>
         <h3>Conocimientos Técnicos</h3>
         <ul>
-          <li>Word (avanzado), Excel, Access, Internet</li>
+          <li>Word, Excel, Internet</li>
           <li>Montaje y mantenimiento de PC, redes básicas</li>
           <li>Photoshop, edición de imagen y video</li>
-          <li>MySQL – nivel básico</li>
           <li>Community manager: estrategia y contenidos</li>
           <li>Coordinación y capacitación de equipos técnicos</li>
         </ul>
@@ -259,7 +280,7 @@
         <div class="icon">📦</div>
         <h3>Capacidades Logísticas</h3>
         <ul>
-          <li>Carretilla frontal, retráctil, transpaleta, apilador (40 h)</li>
+          <li>Carretilla frontal, retráctil, transpaleta, apilador (66 h)</li>
           <li>Soldadura TIG, MIG, electrodo (200 h)</li>
           <li>Picking, inventario, carga/descarga</li>
           <li>Operaciones básicas de industria (100 h Cruz Roja)</li>
@@ -274,9 +295,9 @@
     <h2>Perfil Comercial y Técnico</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>Papeleras Ramírez S.A.</h3>
-        <div class="date">Dic 2009 – Jul 2016 | Venezuela</div>
-        <p>Gerente de compras, community manager, ventas, capacitación de personal.</p>
+        <h3>VJ Marketing</h3>
+        <div class="date">Mar 2005 – Sep 2007 | Venezuela</div>
+        <p>Ejecutivo de ventas por telemarketing.</p>
       </div>
       <div class="timeline-item">
         <h3>SMARMATIC</h3>
@@ -284,19 +305,19 @@
         <p>Coordinación de técnicos para máquinas de votación.</p>
       </div>
       <div class="timeline-item">
-        <h3>VJ Marketing</h3>
-        <div class="date">Mar 2005 – Sep 2007 | Venezuela</div>
-        <p>Ejecutivo de ventas por telemarketing.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Merca Hongwei S.L.</h3>
-        <div class="date">Abr 2023 – Oct 2025 | España</div>
-        <p>Atención al cliente, venta en tienda, manejo de caja y resolución de incidencias.</p>
+        <h3>Papeleras Ramírez S.A.</h3>
+        <div class="date">Dic 2009 – Jul 2016 | Venezuela</div>
+        <p>Gerente de compras, community manager, ventas, capacitación de personal.</p>
       </div>
       <div class="timeline-item">
         <h3>Market Penxu S.L.</h3>
         <div class="date">Oct 2018 – Nov 2020 | España</div>
-        <p>Asesoramiento al cliente, control de stock y reposición.</p>
+        <p>Dependiente de tienda, asesoramiento al cliente, control de stock y reposición.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Merca Hongwei S.L.</h3>
+        <div class="date">Abr 2023 – Oct 2025 | España</div>
+        <p>Dependiente de tienda, atención al cliente, venta en tienda, manejo de caja y resolución de incidencias.</p>
       </div>
     </div>
   </section>
@@ -305,24 +326,14 @@
     <h2>Perfil Logístico y Operativo</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>Merca Hongwei S.L.</h3>
-        <div class="date">Abr 2023 – Oct 2025 | España</div>
-        <p>Reposición, almacén, limpieza y organización.</p>
+        <h3>Lácteos Mendi S.L.</h3>
+        <div class="date">Ago 2017 – Mar 2018 | España</div>
+        <p>Preparación de pedidos, inventario, carretilla.</p>
       </div>
       <div class="timeline-item">
         <h3>Kayaba (Temporing)</h3>
         <div class="date">Feb 2021 – Nov 2022 | España</div>
         <p>Operario de producción, picking, carretilla elevadora.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Market Penxu S.L.</h3>
-        <div class="date">Oct 2018 – Nov 2020 | España</div>
-        <p>Mozo de almacén, reposición, control de inventario.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Lácteos Mendi S.L.</h3>
-        <div class="date">Ago 2017 – Mar 2018 | España</div>
-        <p>Preparación de pedidos, inventario, carretilla.</p>
       </div>
     </div>
   </section>
